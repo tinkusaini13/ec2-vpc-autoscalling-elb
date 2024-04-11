@@ -1,8 +1,6 @@
 # addon provider
 provider "aws" {
   region     = "ap-south-1"
-  access_key = "AKIA5SFDHCTOKUKI"
-  secret_key = "Y9aNmQWESFzkS5KmjZryxT43YFGnjk85aCXn"
 }
 
 #create instance
@@ -71,14 +69,14 @@ resource "aws_security_group" "sample" {
 
 
 
-#################################################################################
+
 
 
 # Create an ELB
 resource "aws_elb" "example" {
   name            = "example-elb"
   security_groups = ["aws_security_group.sample.id"]
-  subnets         = ["aws_subnet.main.id"]    ################################################# BECOME ERROR############################
+  subnets         = ["aws_subnet.main.id"]   # BECOME ERROR
   listener {
     lb_port           = 80
     lb_protocol       = "http"
