@@ -1,8 +1,5 @@
 provider "aws" {
   region = "us-west-2" # Update with your desired region
-  access_key = "AKIA88d8d8he4SHR"
-  secret_key = "X283782yd8wrhgfhryfpKPWyfYUdxZQ7lTw"
-
   default_tags {
     tags = {
       hashicorp-learn = "aws-asg"
